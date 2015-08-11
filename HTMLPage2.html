@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+            <h2>Product Categories</h2>
+            <div class="row" id="by-category">
+                <div id="productLinks" class="col-md-2 col-sm-6 col-xs-6">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel smartWatch">
+                            <a href="http://www.wearables.com/devices?categories=smartwatch" class="img-box">Smartwatches</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel headPhones">
+                            <a href="http://www.wearables.com/devices?categories=headphones" class="img-box">Headphones</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel activityTrackers">
+                            <a href="http://www.wearables.com/devices?categories=activity-tracker" class="img-box">Activity Trackers</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel smartGlasses">
+                            <a href="http://www.wearables.com/devices?categories=smart-glasses" class="img-box">Smart Glasses</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel smartClothing">
+                            <a href="http://www.wearables.com/devices?categories=smart-clothing" class="img-box">Smart Clothing</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel sportWatches">
+                            <a href="http://www.wearables.com/devices?categories=sports-watch" class="img-box">Sportswatches</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel wearableCameras">
+                            <a href="http://www.wearables.com/devices?categories=wearable-camera" class="img-box">Wearable Cameras</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="catRowSel headSets">
+                            <a href="http://www.wearables.com/devices?categories=headset" class="img-box">Headsets</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="productPicture" class="col-md-2 col-sm-6 col-xs-6 productPic centerItUp">
+                    <span class="helper"></span>
+                    <!--<img id="mainProductPic" src="<?php echo site_url(); ?>/wp-content/themes/Nexus/css/root/images/categories/Smartwatches.png" alt="#" />-->
+                    <img id="mainProductPic" class="img-responsive center-block" src="images/foxy.jpg" alt="#" style="height:50px; width:50px;" />
+                </div>
+
+
+            </div>
+    </div>
+
+    <script>
+    //Make product picture column height equal to the column with the product links
+
+    links = document.getElementById('productLinks');
+    pic = document.getElementById('productPicture');
+    pic.style.height = links.offsetHeight + "px";
+    picture = document.getElementById('mainProductPic');
+    //picture.style.width = picture.parentNode.offsetWidth - 100 + "px";
+    </script>
+    <script>
+        //This script is in charge of changing the category image depending on which category is being hovered over
+        $(".smartWatch").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/foxy.jpg');
+        });
+        $(".headPhones").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/image2.jpg');
+        });
+        $(".activityTrackers").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/image3.jpg');
+        });
+        $(".smartGlasses").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/image4.jpeg');
+        });
+        $(".smartClothing").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/image2.jpg');
+        });
+        $(".sportWatches").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/image3.jpg');
+        });
+        $(".wearableCameras").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/image4.jpeg');
+        });
+        $(".headSets").mouseover(function () {
+            $("#mainProductPic").attr('src', 'images/foxy.jpg');
+        });
+
+    </script>
+
+</body>
+</html>
